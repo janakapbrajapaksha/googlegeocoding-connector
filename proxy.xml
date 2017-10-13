@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="getlookup"
+       startOnLoad="true"
+       statistics="disable"
+       trace="disable"
+       transports="http,https">
+   <target>
+      <inSequence>
+         <property expression="json-eval($.apiKey)" name="apiKey"/>
+         <property expression="json-eval($.address)" name="address"/>
+         <property expression="json-eval($.responseFormat)" name="responseFormat"/>
+         <googlegeocoding.init>
+            <apiKey>{$ctx:apiKey}</apiKey>
+         </googlegeocoding.init>
+         <googlegeocoding.getlookup>
+            <address>{$ctx:address}</address>
+            <responseFormat>{$ctx:responseFormat}</responseFormat>
+         </googlegeocoding.getlookup>
+         <respond/>
+      </inSequence>
+   </target>
+   <description/>
+</proxy>
+                                

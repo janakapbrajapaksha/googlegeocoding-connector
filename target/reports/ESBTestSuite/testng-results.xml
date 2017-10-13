@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ESBTestSuite" duration-ms="12" started-at="2017-10-12T15:20:04Z" finished-at="2017-10-12T15:20:04Z">
+  <groups>
+  </groups>
+  <test name="Sample-Connector-Test" duration-ms="12" started-at="2017-10-12T15:20:04Z" finished-at="2017-10-12T15:20:04Z">
+  </test>
+</suite>
